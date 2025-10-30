@@ -2114,8 +2114,12 @@ section:hover .section-title h2::before{width: 100px;}
 	padding-bottom: 10px;
 }
 
+@media(max-width:767px){
+   .testimonial-active .slick-slide{min-height: 435px;}
+}
+
 .services-icon i {
-    font-size: 48px;
+font-size: 48px;
 border-radius: 50%;
 color: #ff4328;
 text-align: center;
@@ -2641,6 +2645,15 @@ text-decoration: underline;
     padding-top: 10px;
     padding-left: 15px;
 }
+
+@media(max-width:767px){
+    .services-box07 .sr-contner{flex-direction: column;text-align: center;}
+    .sr-contner .icon{margin-bottom: 25px;}
+    .sr-contner .icon img{width: 70px;margin: auto;display: block;}
+    .services-box07 .sr-contner .icon{width: 100%;}
+    .service-details-three .services-box07 .sr-contner .icon{width: 100% !important;}
+}
+
 .rotate-90 {
   transform: rotate(90deg);
 }
@@ -2986,13 +2999,13 @@ border: 2px solid #F8971D;
     -o-transform: rotateX(0deg) translateY(0px);
     transform: rotateX(0deg) translateY(0px); } }
 
-.sbox div:nth-child(1) .services-box07 {
+.sbox div:nth-child(1) .services-box07, .sbox div:nth-child(5) .services-box07 {
   background: #ffeec4;
 }
-.sbox div:nth-child(2) .services-box07 {
+.sbox div:nth-child(2) .services-box07, .sbox div:nth-child(6) .services-box07 {
   background:#e5f3ff;
 }
-.sbox div:nth-child(3) .services-box07 {
+.sbox div:nth-child(3) .services-box07, .sbox div:nth-child(7) .services-box07 {
   background: #e1ffe5;
 }
 .sbox div:nth-child(4) .services-box07 {
@@ -4274,12 +4287,14 @@ margin-top: 52px;
 float: left;
 padding-top: 20px;
 }
+.ta-info{position: absolute;bottom: 20px;}
+.ta-info i{color: #fdbf00;font-size: 18px;}
 .testimonial-active .ta-info span {
     color: #F8971D;
     font-size: 16px;
 }
 .testimonial-active .ta-info h6 {
-    font-size: 26px;
+    font-size: 22px;
      margin-top: 5px;
     margin-bottom: 5px;
     color: #151515;
@@ -7954,6 +7969,7 @@ transition: 0.3s;
 .service-details-three h2 {
   color: #fff;
 }
+.service-details-three{margin-bottom: 100px;}
 /*=== Brochures Box ===*/
 
 .brochures-box .box{
@@ -10831,6 +10847,12 @@ footer .single-cta p a{color: #b2c0d8;}
 footer .single-cta p a:hover{color: #fff;}
 footer .single-cta h5{font-size: 16px;}
 
+@media(max-width:767px){
+    .footer-top{padding-bottom: 0 !important;}
+    .footer-widget{margin-bottom: 0 !important;}
+
+}
+
 
 
 /*---------- Get In Touch ----------*/
@@ -10911,3 +10933,42 @@ footer .single-cta h5{font-size: 16px;}
 .vm-box{padding: 10px;}
 }
 
+.single-testimonial{min-height: 367px;}
+
+/*---------- Whatsapp Chat ----------*/
+.wtsap-wrapper{width: 45px;height: 45px;position: fixed;bottom: 140px;right: 50px;z-index: 999;}
+.wtsap-wrapper img{width: 45px;}
+
+.wtsap-wrapper a {
+  display: inline-block;
+}
+
+.wtsap-icon {
+
+  transition: transform 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+
+
+/* Hover Effect */
+.wtsap-icon:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  .wtsap-wrapper{right: 20px;bottom: 100px;}  
+}
